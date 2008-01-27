@@ -4,6 +4,9 @@
 
 # Holds application-wide methods and filters.
 class ApplicationController < ActionController::Base
+  # restful_authentication plugin.
+  include AuthenticatedSystem
+
   helper :all # include all helpers, all the time
 
   # See ActionController::RequestForgeryProtection for details

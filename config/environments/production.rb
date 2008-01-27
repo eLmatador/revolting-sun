@@ -17,3 +17,9 @@ config.action_view.cache_template_loading            = true
 
 # Disable delivery errors, bad email addresses will be ignored
 # config.action_mailer.raise_delivery_errors = false
+
+# Application configuration.
+# TODO: Set these once the site goes live.
+config.app_config.app_url = ''
+config.app_config.app_email = ''
+
