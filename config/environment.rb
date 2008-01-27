@@ -10,6 +10,9 @@ RAILS_GEM_VERSION = '2.0.2' unless defined? RAILS_GEM_VERSION
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 
+# Load the AppConfig plugin.
+require 'plugins/app_config/lib/configuration'
+
 Rails::Initializer.run do |config|
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
@@ -38,7 +41,7 @@ Rails::Initializer.run do |config|
   # no regular words or you'll be exposed to dictionary attacks.
   config.action_controller.session = {
     :session_key => '_r-com_session',
-    :secret      => '4fd0becf00ab2d19bff1858570d7f755ca3cdbd1c66170a4103967086f8a4421dacf6d7088bd9c873439f99ead990989472d193b74ecc689fa9bdfa00a2fffea'
+    :secret      => 'b3699c2873692073462799d50bfab58ab215443eff54a8ed3e32eda7083a55e3b7fa22d8663d6d67a8c066f5410f1a7e191d35a9f014857cb680c54c730f4046'
   }
 
   # Use the database for sessions instead of the cookie-based default,
@@ -56,4 +59,7 @@ Rails::Initializer.run do |config|
 
   # Make Active Record use UTC-base instead of local time
   # config.active_record.default_timezone = :utc
+
+  # Application configuration.
+  config.app_config.app_name = 'R-COM'
 end
