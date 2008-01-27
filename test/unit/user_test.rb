@@ -94,6 +94,14 @@ class UserTest < Test::Unit::TestCase
     assert users(:admin).remember_token_expires_at.between?(before, after)
   end
 
+  def test_for_admin_rights
+    assert_equal true, users(:admin).admin
+  end
+
+  def test_for_no_admin_rights
+    assert_equal false, users(:oshuma).admin
+  end
+
 protected
   def create_user(options = {})
     User.create({ :login => 'quire', :email => 'quire@example.com', :password => 'quire', :password_confirmation => 'quire', :admin => false }.merge(options))
