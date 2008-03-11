@@ -1,2 +1,11 @@
-Use this README file to introduce your application and point to useful places in the API for learning more.
-Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+== R-COM
+
+X-COM clone using Rails.
+
+* Alliances
+* Custom Squads
+* Human or Alien faction
+* Multiplayer (web-based)
+
+Website:: http://r-com.rubyforge.org/
+Bug Tracker:: http://rubyforge.org/tracker/?group_id=3082
