@@ -1,3 +1,5 @@
+# A few helpful Rake tasks.
+
 require 'tasks/rails'
 
 namespace :util do
