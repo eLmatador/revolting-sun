@@ -1,6 +1,7 @@
 # = R-COM
 # Web-based, multiplayer X-COM clone.
 # Author:: Dale Campbell <oshuma@gmail.com>
+# Website:: http://r-com.rubyforge.org/
 
 # This controller handles the login/logout function of the site.  
 class SessionsController < ApplicationController

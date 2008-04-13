@@ -1,6 +1,7 @@
 # = R-COM
 # Web-based, multiplayer X-COM clone.
 # Author:: Dale Campbell <oshuma@gmail.com>
+# Website:: http://r-com.rubyforge.org/
 
 # Handles User creation/activation.
 class UsersController < ApplicationController
