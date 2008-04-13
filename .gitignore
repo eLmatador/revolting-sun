@@ -1,3 +1,6 @@
+r-com.tmproj
+
+# Rails stuff
 log/*.log
 tmp/**/*
 db/*.sqlite3
