@@ -1,4 +1,7 @@
-# Rake tasks for dealing with the git repositories.
+# = R-COM
+# Web-based, multiplayer X-COM clone.
+# Website:: http://r-com.rubyforge.org/
+# Copyright:: WTFPL <http://sam.zoy.org/wtfpl/>
 
 require 'tasks/rails'
 
@@ -6,6 +9,7 @@ require 'tasks/rails'
 # and that the remote repos are named as such:
 REPOS = %w{ github gitorious }
 
+# Rake tasks for dealing with the git repositories.
 namespace :git do
   desc 'Push the code to all repositories'
   task :push do

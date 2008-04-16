@@ -1,7 +1,11 @@
-# A few helpful Rake tasks.
+# = R-COM
+# Web-based, multiplayer X-COM clone.
+# Website:: http://r-com.rubyforge.org/
+# Copyright:: WTFPL <http://sam.zoy.org/wtfpl/>
 
 require 'tasks/rails'
 
+# A few helpful Rake tasks.
 namespace :util do
   desc 'Clear out the log/ and tmp/ directories'
   task :cleanup => :environment do

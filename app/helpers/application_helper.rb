@@ -1,6 +1,7 @@
 # = R-COM
 # Web-based, multiplayer X-COM clone.
 # Website:: http://r-com.rubyforge.org/
+# Copyright:: WTFPL <http://sam.zoy.org/wtfpl/>
 
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper

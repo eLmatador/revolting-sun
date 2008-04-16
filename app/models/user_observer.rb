@@ -1,6 +1,7 @@
 # = R-COM
 # Web-based, multiplayer X-COM clone.
 # Website:: http://r-com.rubyforge.org/
+# Copyright:: WTFPL <http://sam.zoy.org/wtfpl/>
 
 # Watches for changes in a User model.
 class UserObserver < ActiveRecord::Observer

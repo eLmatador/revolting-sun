@@ -1,6 +1,7 @@
 # = R-COM
 # Web-based, multiplayer X-COM clone.
 # Website:: http://r-com.rubyforge.org/
+# Copyright:: WTFPL <http://sam.zoy.org/wtfpl/>
 
 # This controller handles the login/logout function of the site.  
 class AccountController < ApplicationController
