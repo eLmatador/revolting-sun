@@ -1,6 +1,5 @@
 # = R-COM
 # Web-based, multiplayer X-COM clone.
-# Author:: Dale Campbell <oshuma@gmail.com>
 # Website:: http://r-com.rubyforge.org/
 
 # Handles the front page of the site (as well as misc other things).
