@@ -40,10 +40,14 @@ class User < ActiveRecord::Base
   end
 
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
-  # TODO: Add an options hash which can authenticate a User, even if they haven't activated yet.
-  def self.authenticate(login, password)
-    u = find :first, :conditions => ['login = ? and activated_at IS NOT NULL', login] # need to get the salt
-    u && u.authenticated?(password) ? u : nil
+  def self.authenticate(login, password, options = {})
+    options[:already_activated] ||= false
+    if options[:already_activated]
+      user = find :first, :conditions => { :login => login }
+    else
+      user = find :first, :conditions => ['login = ? AND activated_at IS NOT NULL', login]
+    end
+    user && user.authenticated?(password) ? user : nil
   end
 
   # Return true if the given password hash matches the stored one.

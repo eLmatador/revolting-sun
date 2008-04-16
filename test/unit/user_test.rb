@@ -55,6 +55,10 @@ class UserTest < Test::Unit::TestCase
     assert_equal users(:admin), User.authenticate('admin', 'test')
   end
 
+  def test_already_activated_flag
+    assert_equal users(:testguy), User.authenticate('testguy', 'test', :already_activated => true)
+  end
+
   def test_should_set_remember_token
     users(:admin).remember_me
     assert_not_nil users(:admin).remember_token
