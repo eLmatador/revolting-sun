@@ -1,0 +1,9 @@
+<% # Set to true to test flash messages.
+if false
+	flash[:notice] = 'Some notice message.'
+	flash[:warning] = 'Some warning message.'
+end
+%>
+
+<%# Defined in ApplicationHelper. %>
+<%= display_flash %>
