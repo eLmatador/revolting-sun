@@ -1,5 +1,10 @@
 <ul>
 	<li><%= link_to_with_active 'Home', hash_for_root_path %></li>
+
+	<% if is_admin? %>
+		<li><a href="#">Admin</a></li>
+	<% end %>
+
 	<% if logged_in? %>
 		<li><%= link_to_with_active 'Logout', hash_for_logout_path %></li>
 	<% else %>

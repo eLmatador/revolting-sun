@@ -24,6 +24,11 @@ module ApplicationHelper
     end
   end
 
+  # Returns true if the currently logged in User is an administrator.
+  def is_admin?
+    logged_in? && current_user.admin
+  end
+
   # Outputs a link tag with conditional 'active' CSS class.
   def link_to_with_active(link_name, url = {})
     match = /^#{controller.controller_path.split('/').first}\w*/

@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     self.current_user = params[:activation_code].blank? ? :false : User.find_by_activation_code(params[:activation_code])
     if logged_in? && !current_user.active?
       current_user.activate
-      flash[:notice] = 'Your account has been created.  Please check your email.'
+      flash[:notice] = 'Your account has been activated.'
     end
     redirect_back_or_default('/')
   end
@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     @user.save!
     self.current_user = @user
     redirect_back_or_default('/')
-    flash[:notice] = 'Thanks for signing up!'
+    flash[:notice] = 'Your account has been created.  Please check your email.'
   rescue ActiveRecord::RecordInvalid
     render :action => 'new'
   end
