@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>R-COM Home Page</title>
+	</head>
+
+<body>
+	<p>For more information, check here:</p>
+
+	<ul>
+		<li>RubyForge - <a href="http://rubyforge.org/projects/r-com/" title="RubyForge">http://rubyforge.org/projects/r-com/</a></li>
+		<li>Github - <a href="http://github.com/Oshuma/r-com/" title="Github">http://github.com/Oshuma/r-com/</a></li>
+		<li>Gitorious - <a href="http://gitorious.org/projects/r-com" title="Gitorious">http://gitorious.org/projects/r-com</a></li>
+	</ul>
+</body>
+</html>
