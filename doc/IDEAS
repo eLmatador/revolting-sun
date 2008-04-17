@@ -1,0 +1,107 @@
+= Ideas
+
+The original idea was for R-COM to be a turn-based game, with base layouts
+and battles happening in an arbitrarily sized grid.  Players will be able to
+choose either Human or Alien factions (possibly more in the future).  Players
+will be able to form alliances with each other for various goals; trade,
+mercenary, etc.
+
+
+== Game Flow
+
+Player creates an account and logs in.
+
+The first time they log in, the User is prompted to create an initial
+base (their headquarters).
+
+After base creation is finished, the player will get to build their first
+squad (the size of which is up for suggestion).  The player should be able
+to pick from a stock pool of generic soldiers.
+
+After squad creation is finished, the player will be presented with the
+'main' game screen, the world map.  This map will show info on various battles
+and player/NPC movement.
+
+When enough resources are gained, players may build new structures inside
+of their base.  These structures would include things like a barracks for
+training soldiers, hangar for storing aircraft, science lab for researching
+technologies, etc.
+
+If an enemy is detected within the player's range, allow the player to attack.
+This is done in several ways.  If it's an enemy ship, the player may send
+fighters to shoot it down.  Once it crashes, the player may send a transport
+with soldiers to initiate a ground combat battle at the wreckage site.
+
+Another way would be if the detected enemy is already on the ground, at which
+point the player may send a transport to initiate combat.
+
+Repeat until the player's base is destroyed or they conquer the universe (heh).
+
+
+== Stats
+
+Some basic level of stats should be assigned to every object in the game.  For
+example, a soldier might have stats such as 'Health', 'Accuracy', 'Piloting',
+and so forth; while a building might simply have a 'Durability' stat to track
+it's damage.  Stats should be thought-out and added, even if they won't be used
+until a later date.  This way, we can build the code around the existing
+attributes, instead of having to go back and add one here and there, etc.
+
+
+=== Example Stats
+
+Soldier:
+* Name - String - Obvious use.
+* Health - Integer - Obvious use.
+* Armor - Integer - Soldier's armor level.  Might get moved into an equipment
+type thing.
+* Action Points - Integer - How many actions this soldier can perform per round.
+For example, firing a pistol might take two AP, while firing a rocket launcher might take five.
+* Accuracy - Integer - Determines accuracy with weapons.  Weapon accuracy would
+get factored into the final calculation, to give sniper rifles better accuracy, etc.
+* Strength - Integer - Carrying capacity; other neat things like pulling wounded
+soldiers out of harms way (a skill maybe?)
+
+Weapons:
+* Name - String - Obvious use.
+* Type - String - Pistol, Rifle, Grenade, etc.
+* Accuracy - Integer - See the description of Soldier Accuracy.
+* Ammo - Array - Current / Max amount of ammo.  Stored as an array like this:
+[12, 30]  Which means 12 rounds left, with a 30 round max clip.
+* Damage - Integer - Obvious use.
+
+Vehicles:
+* Name - String - Obvious use.
+* Type - String - Fighter, Transport, Tank, etc.
+* Armor - Integer - Obvious use (like Health for a Soldier).
+* Speed - Integer - Sort of like Action Points for a Soldier; might just name it
+Action Points instead of Speed.
+* Weapons - Not sure of the best way to handle this yet.  Since a Fighter can
+possibly have a machine gun and missles as weapons and a Transport could have no
+weapons at all.
+
+Buildings:
+* Name - String - Obvious use.
+* Cost - Integer - Cost to build.
+* Type - String - Barracks, Hangar, Lab, etc.
+* Durability - Integer - Like Health for a Soldier.
+* Research - This would probably be dependent upon the Type, since a Barracks
+should be generating Research points.  Figure out a nice way to handle this.
+
+
+== Economy, Combat, and bears! Oh my!
+
+I haven't really put much thought into how the economy and researching should
+be worked out.  I've got a fairly good idea on how to make a balanced combat
+system, but the economy and research systems are still up in the air.
+Suggestions are definitely welcome.
+
+
+== Data Feeds
+
+All of the game data should be available through a data exchange format,
+such as XML, JSON, YAML, etc.  All interaction with the game data should
+be made using RESTful principles, so theoretically any client that knows
+how to use the four standard HTTP methods can be used to play the game,
+it's not limited to just a web browser.  This could lead to console or GUI
+clients, and even mobile clients.
