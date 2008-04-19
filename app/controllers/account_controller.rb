@@ -3,8 +3,10 @@
 # Website:: http://r-com.rubyforge.org/
 # Copyright:: WTFPL <http://sam.zoy.org/wtfpl/>
 
-# This controller handles the login/logout function of the site.  
+# This controller handles the login/logout function of the site.
 class AccountController < ApplicationController
+  before_filter :redirect_if_logged_in, :only => [ :new, :create ]
+
   # render new.html.erb
   # Login form.
   def new

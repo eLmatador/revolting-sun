@@ -9,4 +9,5 @@ class Squad < ActiveRecord::Base
   has_many :soldiers
 
   validates_presence_of :army_id, :name
+  validates_uniqueness_of :name, :message => 'is already taken.'
 end

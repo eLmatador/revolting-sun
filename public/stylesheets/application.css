@@ -8,6 +8,7 @@
 	height: 1em;
 }
 #app_menu ul {
+	background-color: #bbb;
 	list-style-type: none;
 }
 #app_menu li {
@@ -31,7 +32,7 @@
 	border-top: none;
 	margin-left: 199px;
 	margin-right: 199px;
-	padding: 0 1em;
+	padding: 1em;
 
 	/* IE hacks */
 	voice-family: "\"}\"";

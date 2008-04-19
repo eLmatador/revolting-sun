@@ -56,7 +56,8 @@ class UserTest < Test::Unit::TestCase
   end
 
   def test_already_activated_flag
-    assert_equal users(:testguy), User.authenticate('testguy', 'test', :already_activated => true)
+    # testguy has not yet activated their account.
+    assert_equal users(:testguy), User.authenticate('testguy', 'test', :allow_not_activated => true)
   end
 
   def test_should_set_remember_token

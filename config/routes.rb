@@ -9,6 +9,11 @@ ActionController::Routing::Routes.draw do |map|
   map.signup '/signup', :controller => 'users', :action => 'new'
   map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate'
 
+  # Army management routes.
+  map.resource :army, :controller => 'army'
+  # map.resources :squads
+  # map.resources :soldiers
+
   # The front page of the site.
   map.root :controller => 'home', :action => 'index'
 

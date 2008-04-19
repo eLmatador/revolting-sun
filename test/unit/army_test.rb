@@ -19,6 +19,15 @@ class ArmyTest < ActiveSupport::TestCase
     end
   end
 
+  def test_name_uniqueness
+    @army = create_army(:name => 'New Army')
+    assert @army.save
+    @evil_army = create_army(:name => 'New Army') # same as above
+    assert_raise ActiveRecord::RecordInvalid do
+      @evil_army.save!
+    end
+  end
+
   protected
 
   def create_army(options = {})

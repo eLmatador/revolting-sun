@@ -9,5 +9,6 @@ class Soldier < ActiveRecord::Base
   belongs_to :squad
 
   validates_presence_of :army_id, :squad_id
-  validates_presence_of :name, :health, :armor, :actions, :accuracy, :strength
+  validates_presence_of :name, :message => 'must not be empty.'
+  validates_presence_of :health, :armor, :actions, :accuracy, :strength
 end

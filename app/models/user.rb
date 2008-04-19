@@ -42,10 +42,13 @@ class User < ActiveRecord::Base
     activation_code.nil?
   end
 
-  # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
+  # Authenticates a user by their login name and unencrypted password.
+  # If +allow_not_activated+ is true, then it will authenticate a User,
+  # even if they haven't activated their account.
+  # Returns the user or nil.
   def self.authenticate(login, password, options = {})
-    options[:already_activated] ||= false
-    if options[:already_activated]
+    options[:allow_not_activated] ||= false
+    if options[:allow_not_activated]
       user = find :first, :conditions => { :login => login }
     else
       user = find :first, :conditions => ['login = ? AND activated_at IS NOT NULL', login]

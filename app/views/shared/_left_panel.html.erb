@@ -1,0 +1,8 @@
+<% if logged_in? && current_user.army %>
+	<p>Commander: <%= current_user.login %></p>
+	<p>Army: <%= current_user.army.name %></p>
+	<p>Squad Count: <%= current_user.army.squads.size %></p>
+	<p>Soldier Count: <%= current_user.army.soldiers.size %></p>
+<% else %>
+	<p>LEFT PANEL</p>
+<% end %>

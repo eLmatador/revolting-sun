@@ -1,14 +1,15 @@
 <ul>
 	<li><%= link_to_with_active 'Home', hash_for_root_path %></li>
 
-	<% if is_admin? %>
-		<li><a href="#">Admin</a></li>
-	<% end %>
-
 	<% if logged_in? %>
+		<li><%= link_to_with_active 'Army', hash_for_army_path %></li>
 		<li><%= link_to_with_active 'Logout', hash_for_logout_path %></li>
 	<% else %>
 		<li><%= link_to_with_active 'Login', hash_for_login_path %></li>
 		<li><%= link_to_with_active 'Sign Up', hash_for_signup_path %></li>
+	<% end %>
+
+	<% if is_admin? %>
+		<li><a href="#">[ Admin ]</a></li>
 	<% end %>
 </ul>

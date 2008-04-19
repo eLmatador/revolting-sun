@@ -5,14 +5,16 @@
 
 # Handles User creation/activation.
 class UsersController < ApplicationController
+  before_filter :redirect_if_logged_in
+
   # Used to activate a newly created User.
   def activate
     self.current_user = params[:activation_code].blank? ? :false : User.find_by_activation_code(params[:activation_code])
     if logged_in? && !current_user.active?
       current_user.activate
-      flash[:notice] = 'Your account has been activated.'
+      # flash[:notice] = 'Your account has been activated.'
     end
-    redirect_back_or_default('/')
+    redirect_to army_path
   end
 
   # render new.html.erb

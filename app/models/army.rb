@@ -7,6 +7,9 @@
 class Army < ActiveRecord::Base
   belongs_to :user
   has_many :squads
+  has_many :soldiers
 
-  validates_presence_of :user_id, :name
+  validates_presence_of :user_id
+  validates_presence_of :name, :message => 'must not be empty.'
+  validates_uniqueness_of :name, :message => 'is already taken.'
 end
