@@ -7,6 +7,8 @@ require 'digest/sha1'
 
 # Stores User data.
 class User < ActiveRecord::Base
+  has_one :army
+
   # Field validations.
   validates_presence_of     :login, :email
   validates_presence_of     :password,                   :if => :password_required?

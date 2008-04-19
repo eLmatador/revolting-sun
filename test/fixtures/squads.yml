@@ -1,0 +1,16 @@
+# Squad fixtures.
+mod_squad:
+  army: admin_army
+  name: "The Mod Squad"
+the_creators:
+  army: admin_army
+  name: "The Creators"
+
+ninja_robots:
+  army: oshuma_army
+  name: "A Bunch of Ninja Robots"
+samurai_chicks:
+  army: oshuma_army
+  name: "Naked Asian Samurai Chicks"
+
+# testguy has no squads, since he has no army.

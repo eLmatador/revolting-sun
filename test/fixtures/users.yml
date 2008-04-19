@@ -1,3 +1,4 @@
+# User fixtures.
 admin:
   login: admin
   email: admin@localhost
@@ -25,4 +26,5 @@ testguy:
   crypted_password: 00742970dc9e6319f8019fd54864d3ea740f04b1 # test
   created_at: <%= 1.days.ago.to_s :db %>
   activation_code: 8f24789ae988411ccf33ab0c30fe9106fab32e9a
+  # No activated_at, so not yet activated.
   admin: false

@@ -37,5 +37,11 @@ class Test::Unit::TestCase
   # -- they do not yet inherit this setting
   fixtures :all
 
-  # Add more helper methods to be used by all tests here...
+  # This method is used in various stat generation.
+  # TODO: Find a way to make this available for use in fixtures.
+  def rand_stat(min, max)
+    return unless min && max
+    stat = rand(max)
+    stat > min ? (return stat) : rand_stat(min, max)
+  end
 end

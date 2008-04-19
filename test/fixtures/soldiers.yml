@@ -1,0 +1,92 @@
+# Soldier fixtures.
+
+<% # This method is used in Soldier stat generation.
+def rand_stat(min, max)
+  return unless min && max
+  stat = rand(max)
+  stat > min ? (return stat) : rand_stat(min, max)
+end
+%>
+
+the_admin:
+  army: admin_army
+  squad: mod_squad
+  name: "The Administrator"
+  health: <%= rand_stat(30, 50) %>
+  actions: <%= rand_stat(10, 20) %>
+  strength: <%= rand_stat(10, 50) %>
+  armor: 0    # Armor should default to 0, it's modified by equipment, class, etc.
+  accuracy: 0 # Ditto for Accuracy.
+admin_sniper:
+  army: admin_army
+  squad: mod_squad
+  name: "Sniper for the Admin"
+  health: <%= rand_stat(30, 50) %>
+  actions: <%= rand_stat(10, 20) %>
+  strength: <%= rand_stat(10, 50) %>
+  armor: 0
+  accuracy: 0
+admin_medic:
+  army: admin_army
+  squad: mod_squad
+  name: "Medic for the Admin"
+  health: <%= rand_stat(30, 50) %>
+  actions: <%= rand_stat(10, 20) %>
+  strength: <%= rand_stat(10, 50) %>
+  armor: 0
+  accuracy: 0
+admin_sniper:
+  army: admin_army
+  squad: the_creators
+  name: "Sniper for the Admin"
+  health: <%= rand_stat(30, 50) %>
+  actions: <%= rand_stat(10, 20) %>
+  strength: <%= rand_stat(10, 50) %>
+  armor: 0
+  accuracy: 0
+
+hk47:
+  army: oshuma_army
+  squad: ninja_robots
+  name: "HK-47"
+  health: <%= rand_stat(30, 50) %>
+  actions: <%= rand_stat(10, 20) %>
+  strength: <%= rand_stat(10, 50) %>
+  armor: 0
+  accuracy: 0
+r2d2:
+  army: oshuma_army
+  squad: ninja_robots
+  name: "R2-D2"
+  health: <%= rand_stat(30, 50) %>
+  actions: <%= rand_stat(10, 20) %>
+  strength: <%= rand_stat(10, 50) %>
+  armor: 0
+  accuracy: 0
+johnny_five:
+  army: oshuma_army
+  squad: ninja_robots
+  name: "Johnny Five"
+  health: <%= rand_stat(30, 50) %>
+  actions: <%= rand_stat(10, 20) %>
+  strength: <%= rand_stat(10, 50) %>
+  armor: 0
+  accuracy: 0
+miho:
+  army: oshuma_army
+  squad: samurai_chicks
+  name: "Miho"
+  health: <%= rand_stat(30, 50) %>
+  actions: <%= rand_stat(10, 20) %>
+  strength: <%= rand_stat(10, 50) %>
+  armor: 0
+  accuracy: 0
+mary_jane:
+  army: oshuma_army
+  squad: samurai_chicks
+  name: "Mary Jane"
+  health: <%= rand_stat(30, 50) %>
+  actions: <%= rand_stat(10, 20) %>
+  strength: <%= rand_stat(10, 50) %>
+  armor: 0
+  accuracy: 0

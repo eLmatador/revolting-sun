@@ -56,7 +56,7 @@ Soldier:
 * Class - String (or SoldierClass model) - Infantry, Medic, etc.
 * Armor - Integer - Soldier's armor level.  Might get moved into an equipment
 type thing.
-* Action Points - Integer - How many actions this soldier can perform per round.
+* Actions - Integer - How many actions this soldier can perform per round.
 For example, firing a pistol might take two AP, while firing a rocket launcher might take five.
 * Accuracy - Integer - Determines accuracy with weapons.  Weapon accuracy would
 get factored into the final calculation, to give sniper rifles better accuracy, etc.

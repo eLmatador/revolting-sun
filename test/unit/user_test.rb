@@ -106,8 +106,15 @@ class UserTest < Test::Unit::TestCase
     assert_equal false, users(:oshuma).admin
   end
 
-protected
+  protected
+
   def create_user(options = {})
-    User.create({ :login => 'quire', :email => 'quire@example.com', :password => 'quire', :password_confirmation => 'quire', :admin => false }.merge(options))
+    User.create( {
+      :login => 'newguy',
+      :email => 'newguy@localhost',
+      :password => 'NEW PASS',
+      :password_confirmation => 'NEW PASS',
+      :admin => false
+    }.merge(options) )
   end
 end

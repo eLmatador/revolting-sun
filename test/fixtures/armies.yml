@@ -1,0 +1,10 @@
+# Army fixtures
+admin_army:
+  user: admin
+  name: "Admin's Army"
+
+oshuma_army:
+  user: oshuma
+  name: "Oshuma's Army"
+
+# testguy has no army, as it's created upon activation.
