@@ -5,6 +5,7 @@
 
 #app_menu {
 	background-color: #bbb;
+	height: 1em;
 }
 #app_menu ul {
 	list-style-type: none;
@@ -26,9 +27,36 @@
 }
 
 #app_content {
-	/* border: 1px solid #000; */
-	margin: 0.5em;
+	border: 1px solid #bbb;
+	margin-left: 199px;
+	margin-right: 199px;
+	padding: 1em;
+
+	/* IE hacks */
+	voice-family: "\"}\"";
+	voice-family: inherit;
+	margin-left: 201px;
+	margin-right: 201px;
+}
+html>body #centercontent {
+	margin-left: 201px;
+	margin-right: 201px;
+}
+
+#app_left_panel {
+	border: 1px solid #bbb;
 	padding: 0.5em;
+	position: absolute;
+	top: 1em;
+	width: 184px;
+}
+#app_right_panel {
+	border: 1px solid #bbb;
+	padding: 0.5em;
+	position: absolute;
+	right: 0;
+	top: 1em;
+	width: 184px;
 }
 
 .app_message {
