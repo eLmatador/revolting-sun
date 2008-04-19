@@ -11,8 +11,8 @@ mercenary, etc.
 
 Player creates an account and logs in.
 
-The first time they log in, the User is prompted to create an initial
-base (their headquarters).
+Upon activating their account, the User is prompted to create an initial
+base (their headquarters) and an army.
 
 After base creation is finished, the player will get to build their first
 squad (the size of which is up for suggestion).  The player should be able
