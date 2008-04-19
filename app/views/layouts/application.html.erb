@@ -18,15 +18,15 @@
 			<%= render :partial => 'shared/menu' %>
 		</div>
 
-		<div id="app_messages">
-			<%= render :partial => 'shared/messages' %>
-		</div>
-
 		<div id="app_left_panel">
 			<p>LEFT PANEL</p>
 		</div>
 
 		<div id="app_content">
+			<div id="app_messages">
+				<%= render :partial => 'shared/messages' %>
+			</div>
+
 			<%= yield %>
 		</div>
 

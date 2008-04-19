@@ -28,9 +28,10 @@
 
 #app_content {
 	border: 1px solid #bbb;
+	border-top: none;
 	margin-left: 199px;
 	margin-right: 199px;
-	padding: 1em;
+	padding: 0 1em;
 
 	/* IE hacks */
 	voice-family: "\"}\"";
@@ -42,9 +43,13 @@ html>body #centercontent {
 	margin-left: 201px;
 	margin-right: 201px;
 }
+#app_content p {
+	margin: 0.5em;
+}
 
 #app_left_panel {
 	border: 1px solid #bbb;
+	border-top: none;
 	padding: 0.5em;
 	position: absolute;
 	top: 1em;
@@ -52,6 +57,7 @@ html>body #centercontent {
 }
 #app_right_panel {
 	border: 1px solid #bbb;
+	border-top: none;
 	padding: 0.5em;
 	position: absolute;
 	right: 0;
@@ -61,8 +67,6 @@ html>body #centercontent {
 
 .app_message {
 	font-weight: bold;
-	margin: auto 1em;
-	padding: 2px 1em;
 }
 .app_message a {
 	color: rgb(0, 0, 0);
