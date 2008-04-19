@@ -53,6 +53,7 @@ attributes, instead of having to go back and add one here and there, etc.
 Soldier:
 * Name - String - Obvious use.
 * Health - Integer - Obvious use.
+* Class - String (or SoldierClass model) - Infantry, Medic, etc.
 * Armor - Integer - Soldier's armor level.  Might get moved into an equipment
 type thing.
 * Action Points - Integer - How many actions this soldier can perform per round.
