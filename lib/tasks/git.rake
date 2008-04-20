@@ -7,7 +7,7 @@ require 'tasks/rails'
 
 # These tasks assume there's a task called 'git:push:repo_name'
 # and that the remote repos are named as such:
-REPOS = %w{ github gitorious }
+REPOS = %w{ github gitorious rubyforge }
 
 # Rake tasks for dealing with the git repositories.
 namespace :git do
@@ -27,13 +27,19 @@ namespace :git do
     desc 'Push the code to githb'
     task :github do
       header('Pushing to github.')
-      sh "git push github"
+      sh 'git push github'
     end
     
     desc 'Push the code to gitorious'
     task :gitorious do
       header('Pushing to gitorious.')
-      sh "git push gitorious"
+      sh 'git push gitorious'
+    end
+
+    desc 'Push the code to RubyForge'
+    task :rubyforge do
+      header('Pushing to RubyForge.')
+      sh 'git push rubyforge'
     end
   end
 end
