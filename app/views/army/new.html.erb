@@ -1,4 +1,4 @@
-<p>You account has been activated.  Now you must pick a name for your army.</p>
+<p>Select a name for this army.</p>
 
 <%= error_messages_for :army %>
 
@@ -8,5 +8,5 @@
 		<%= a.text_field :name %>
 	</p>
 
-	<p><%= submit_tag (controller.action_name == 'new' ? 'Create' : 'Save' ) %></p>
+	<p><%= submit_tag(controller.action_name == 'new' ? 'Create' : 'Save' ) %></p>
 <% end %>

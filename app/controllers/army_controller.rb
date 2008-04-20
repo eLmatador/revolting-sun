@@ -8,7 +8,7 @@ class ArmyController < ApplicationController
   before_filter :login_required
   before_filter :load_army, :except => [ :new, :create ]
 
-  # Create the new User; gets input from 'new'.
+  # Save the new Army; gets input from 'new'.
   def create
     @army = Army.new(params[:army])
     @army.user_id = current_user.id
@@ -19,9 +19,9 @@ class ArmyController < ApplicationController
     render :action => 'new'
   end
 
-  # Create a new Army.  Called upon User activation (from UsersController#activate).
+  # Display Army creation form.
   def new
-    @page_title = "Create Army"
+    @page_title = 'Create Army'
     respond_to do |format|
       format.html # render new.html.erb
     end
@@ -29,7 +29,7 @@ class ArmyController < ApplicationController
 
   # Army management front-end.
   def show
-    @page_title = "Army Management"
+    @page_title = 'Army Management'
     respond_to do |format|
       format.html # render index.html.erb
       format.xml { render :xml => @army.to_xml }
@@ -42,7 +42,7 @@ class ArmyController < ApplicationController
   def load_army
     return unless logged_in?
     @army = current_user.army
-    if @army.nil?
+    if @army.nil? # User has no Army.
       redirect_to new_army_path
     end
   end

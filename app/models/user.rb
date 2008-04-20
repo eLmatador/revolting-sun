@@ -7,7 +7,8 @@ require 'digest/sha1'
 
 # Stores User data.
 class User < ActiveRecord::Base
-  has_one :army
+  has_one :army # TODO: Might make this one army per Embassy.
+  has_one :embassy
 
   # Field validations.
   validates_presence_of     :login, :email
@@ -81,6 +82,11 @@ class User < ActiveRecord::Base
   # Returns true if the user has just been activated.
   def pending?
     @activated
+  end
+
+  # Is the User all setup and ready for war?  Returns true/false.
+  def ready_for_war?
+    return true if (self.embassy && self.army)
   end
 
   # Returns true if the remember token hasn't expired.

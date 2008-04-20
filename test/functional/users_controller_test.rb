@@ -53,7 +53,7 @@ class UsersControllerTest < Test::Unit::TestCase
   def test_should_activate_user
     assert_nil User.authenticate('testguy', 'test')
     get :activate, :activation_code => users(:testguy).activation_code
-    assert_redirected_to army_path
+    assert_redirected_to embassy_path
     assert_equal users(:testguy), User.authenticate('testguy', 'test')
   end
 

@@ -7,4 +7,4 @@ oshuma_army:
   user: oshuma
   name: "Oshuma's Army"
 
-# testguy has no army, as it's created upon activation.
+# testguy has no Army, as it's created upon activation.

@@ -1,0 +1,12 @@
+<p>You account has been activated.  Now you must create an embassy.</p>
+
+<%= error_messages_for :embassy %>
+
+<% form_for :embassy, :url => embassy_path do |e| %>
+	<p>
+		<%= e.label :name, 'Embassy Name:' %>
+		<%= e.text_field :name %>
+	</p>
+
+	<p><%= submit_tag(controller.action_name == 'new' ? 'Create' : 'Save') %></p>
+<% end %>

@@ -1,0 +1,10 @@
+# Embassy fixtures.
+admin_embassy:
+  user: admin
+  name: "Admin's HQ"
+
+oshuma_embassy:
+  user: oshuma
+  name: "Oshuma's HQ"
+
+# testguy has no Embassy, since it's created upon activation.

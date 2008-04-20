@@ -14,11 +14,11 @@ class UsersController < ApplicationController
       current_user.activate
       # flash[:notice] = 'Your account has been activated.'
     end
-    redirect_to army_path
+    redirect_to embassy_path
   end
 
   # render new.html.erb
-  # Signup form.
+  # Sign up form.
   def new
   end
 

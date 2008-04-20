@@ -1,0 +1,2 @@
+module EmbassyHelper
+end

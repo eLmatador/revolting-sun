@@ -10,6 +10,7 @@ ActionController::Routing::Routes.draw do |map|
   map.activate '/activate/:activation_code', :controller => 'users', :action => 'activate'
 
   # Army management routes.
+  map.resource :embassy, :controller => 'embassy'
   map.resource :army, :controller => 'army'
   # map.resources :squads
   # map.resources :soldiers

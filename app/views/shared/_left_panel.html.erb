@@ -1,5 +1,6 @@
-<% if logged_in? && current_user.army %>
+<% if logged_in? && current_user.ready_for_war? %>
 	<p>Commander: <%= current_user.login %></p>
+	<p>Embassy: <%= current_user.embassy.name %></p>
 	<p>Army: <%= current_user.army.name %></p>
 	<p>Squad Count: <%= current_user.army.squads.size %></p>
 	<p>Soldier Count: <%= current_user.army.soldiers.size %></p>
