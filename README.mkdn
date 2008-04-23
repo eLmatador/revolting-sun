@@ -1,15 +1,15 @@
-= Revolting Sun
+# Revolting Sun
 
 Website:: http://revolting-sun.rubyforge.org/
 Bug Tracker:: http://rubyforge.org/tracker/?group_id=6101
 License:: WTFPL[http://sam.zoy.org/wtfpl]
 
-== Code
+## Code
 RubyForge:: git://rubyforge.org/revolting-sun.git
 Github:: git://github.com/Oshuma/revolting-sun.git
 
 
-== Ideas
+## Ideas
 
 The original idea was for Revolting Sun to be a turn-based game, with base layouts
 and battles happening in an arbitrarily sized grid.  Players will be able to
@@ -18,7 +18,7 @@ will be able to form alliances with each other for various goals; trade,
 mercenary, etc.
 
 
-== Game Flow
+## Game Flow
 
 Player creates an account and logs in.
 
@@ -49,7 +49,7 @@ point the player may send a transport to initiate combat.
 Repeat until the player's base is destroyed or they conquer the universe (heh).
 
 
-== Stats
+## Stats
 
 Some basic level of stats should be assigned to every object in the game.  For
 example, a soldier might have stats such as 'Health', 'Accuracy', 'Piloting',
@@ -59,7 +59,7 @@ until a later date.  This way, we can build the code around the existing
 attributes, instead of having to go back and add one here and there, etc.
 
 
-=== Example Stats
+### Example Stats
 
 Soldier:
 * Name - String - Obvious use.
@@ -92,7 +92,7 @@ Buildings:
 * Research - This would probably be dependent upon the Type, since a Barracks should be generating Research points.  Figure out a nice way to handle this.
 
 
-== Economy, Combat, and bears! Oh my!
+## Economy, Combat, and bears! Oh my!
 
 I haven't really put much thought into how the economy and researching should
 be worked out.  I've got a fairly good idea on how to make a balanced combat
@@ -100,7 +100,7 @@ system, but the economy and research systems are still up in the air.
 Suggestions are definitely welcome.
 
 
-== Data Feeds
+## Data Feeds
 
 All of the game data should be available through a data exchange format,
 such as XML, JSON, YAML, etc.  All interaction with the game data should
