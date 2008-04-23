@@ -3,7 +3,7 @@ title: DRY up git Rake tasks.
 desc: There's a lot of repetition in there!
 type: :feature
 component: rsun
-release: alpha
+release: 
 reporter: Dale Campbell <oshuma@gmail.com>
 status: :unstarted
 disposition: 
@@ -16,3 +16,7 @@ log_events:
   - Dale Campbell <oshuma@gmail.com>
   - created
   - ""
+- - 2008-04-23 07:56:48.846237 Z
+  - Dale Campbell <oshuma@gmail.com>
+  - unassigned from release alpha
+  - Not really critical.

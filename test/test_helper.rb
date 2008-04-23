@@ -38,7 +38,6 @@ class Test::Unit::TestCase
   fixtures :all
 
   # This method is used in various stat generation.
-  # TODO: Find a way to make this available for use in fixtures.
   def rand_stat(min, max)
     return unless min && max
     stat = rand(max)

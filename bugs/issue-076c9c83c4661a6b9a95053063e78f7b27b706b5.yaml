@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Make rand_stat() test helper method available to fixtures.
+desc: Title says it all.
+type: :feature
+component: rsun
+release: 
+reporter: Dale Campbell <oshuma@gmail.com>
+status: :unstarted
+disposition: 
+creation_time: 2008-04-23 07:55:28.892538 Z
+references: []
+
+id: 076c9c83c4661a6b9a95053063e78f7b27b706b5
+log_events: 
+- - 2008-04-23 07:55:29.892588 Z
+  - Dale Campbell <oshuma@gmail.com>
+  - created
+  - ""

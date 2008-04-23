@@ -7,7 +7,7 @@ require 'digest/sha1'
 
 # Stores User data.
 class User < ActiveRecord::Base
-  has_one :army # TODO: Might make this one army per Embassy.
+  has_one :army
   has_one :embassy
 
   # Field validations.
