@@ -1,8 +1,19 @@
 # Revolting Sun
 
-Website:: http://revolting-sun.rubyforge.org/
-Bug Tracker:: http://rubyforge.org/tracker/?group_id=6101
-License:: WTFPL[http://sam.zoy.org/wtfpl]
+<table>
+	<tr>
+		<td>Website:</td>
+		<td><http://revolting-sun.rubyforge.org/></td>
+	</tr>
+	<tr>
+		<td>Bug Tracker:</td>
+		<td><http://rubyforge.org/tracker/?group_id=6101></td>
+	</tr>
+	<tr>
+		<td>License:</td>
+		<td>[WTFPL](http://sam.zoy.org/wtfpl)</td>
+	</tr>
+<table>
 
 ## Code
 RubyForge:: git://rubyforge.org/revolting-sun.git
