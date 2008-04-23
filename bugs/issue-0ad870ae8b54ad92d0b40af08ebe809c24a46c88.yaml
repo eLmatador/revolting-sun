@@ -1,0 +1,20 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Multiple Embassies and Armies
+desc: |-
+  Once Google Maps is integrated, provide the option to construct multiple
+  Embassies, each with their own Army.
+type: :feature
+component: rsun
+release: alpha
+reporter: Dale Campbell <oshuma@gmail.com>
+status: :unstarted
+disposition: 
+creation_time: 2008-04-23 05:50:52.928220 Z
+references: []
+
+id: 0ad870ae8b54ad92d0b40af08ebe809c24a46c88
+log_events: 
+- - 2008-04-23 05:51:00.192254 Z
+  - Dale Campbell <oshuma@gmail.com>
+  - created
+  - Assigning to alpha release.

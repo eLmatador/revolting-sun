@@ -1,0 +1,16 @@
+--- !ditz.rubyforge.org,2008-03-06/project 
+name: rsun
+version: "0.2"
+components: 
+- !ditz.rubyforge.org,2008-03-06/component 
+  name: rsun
+releases: 
+- !ditz.rubyforge.org,2008-03-06/release 
+  name: alpha
+  status: :unreleased
+  release_time: 
+  log_events: 
+  - - 2008-04-23 05:44:31.623625 Z
+    - Dale Campbell <oshuma@gmail.com>
+    - created
+    - The alpha release of Revolting Sun.
