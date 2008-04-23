@@ -23,5 +23,4 @@ config.action_mailer.delivery_method = :test
 
 # Application configuration.
 config.app_config.app_url = 'localhost:3000'
-config.app_config.app_email = 'r-com@localhost'
-
+config.app_config.app_email = 'revolting-sun@localhost'

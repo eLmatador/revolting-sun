@@ -19,5 +19,4 @@ config.action_mailer.raise_delivery_errors = false
 
 # Application configuration.
 config.app_config.app_url = 'localhost:3000'
-config.app_config.app_email = 'r-com@localhost'
-
+config.app_config.app_email = 'revolting-sun@localhost'

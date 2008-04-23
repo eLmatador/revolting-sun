@@ -1,6 +1,6 @@
-# = R-COM
+# = Revolting Sun
 # Web-based, multiplayer X-COM clone.
-# Website:: http://r-com.rubyforge.org/
+# Website:: http://revolting-sun.rubyforge.org/
 # Copyright:: WTFPL <http://sam.zoy.org/wtfpl/>
 
 # View helpers for the AccountController.

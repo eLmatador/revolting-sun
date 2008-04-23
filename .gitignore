@@ -1,5 +1,3 @@
-r-com.tmproj
-
 # Rails stuff
 config/database.yml
 log/*.log

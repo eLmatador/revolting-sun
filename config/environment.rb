@@ -40,7 +40,7 @@ Rails::Initializer.run do |config|
   # Make sure the secret is at least 30 characters and all random, 
   # no regular words or you'll be exposed to dictionary attacks.
   config.action_controller.session = {
-    :session_key => '_r-com_session',
+    :session_key => '_revolting-sun_session',
     :secret      => 'b3699c2873692073462799d50bfab58ab215443eff54a8ed3e32eda7083a55e3b7fa22d8663d6d67a8c066f5410f1a7e191d35a9f014857cb680c54c730f4046'
   }
 
@@ -64,5 +64,5 @@ Rails::Initializer.run do |config|
   # config.active_record.default_timezone = :utc
 
   # Application configuration.
-  config.app_config.app_name = 'R-COM'
+  config.app_config.app_name = 'Revolting Sun'
 end
