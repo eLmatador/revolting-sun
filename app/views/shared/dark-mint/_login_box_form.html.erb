@@ -1,0 +1,18 @@
+<% form_tag account_path do -%>
+	<li style="margin: 5px 0;">
+		<%= text_field_tag :login, nil, :class => 'login_box_field' %>
+	</li>
+
+	<li style="margin: 5px 0;">
+		<%= password_field_tag :password, nil, :class => 'login_box_field' %>
+	</li>
+
+	<li style="margin: 5px 0;">
+		<label for="remember_me">Remember:</label>
+		<%= check_box_tag 'remember_me' %>
+	</li>
+
+	<li>
+		<%= submit_tag 'Login', :id => 'login_box_submit' %>
+	</li>
+<% end %>

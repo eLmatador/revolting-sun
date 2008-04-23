@@ -1,0 +1,13 @@
+<ul class="clearfix">
+	<li><%= link_to_with_current 'Home', hash_for_root_path %></li>
+
+	<% if logged_in? %>
+		<li><%= link_to_with_current 'Army', hash_for_army_path %></li>
+	<% else %>
+		<li><%= link_to_with_current 'Sign Up', hash_for_signup_path %></li>
+	<% end %>
+
+	<% if is_admin? %>
+		<li><a href="#">[ Admin ]</a></li>
+	<% end %>
+</ul>

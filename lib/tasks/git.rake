@@ -18,7 +18,7 @@ namespace :git do
   task :push do
     Rake::Task['git:push:all'].invoke
   end
-  
+
   namespace :push do
     desc 'Push the code to all repositories'
     task :all do
@@ -26,13 +26,13 @@ namespace :git do
         Rake::Task["git:push:#{repo}"].invoke
       end
     end
-    
+
     desc 'Push the code to githb'
     task :github do
       header("Pushing branch '#{BRANCH}' to github.")
       sh "git push github #{BRANCH}"
     end
-    
+
     desc 'Push the code to gitorious'
     task :gitorious do
       header("Pushing branch '#{BRANCH}' to gitorious.")

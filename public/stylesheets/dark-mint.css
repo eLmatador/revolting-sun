@@ -1,0 +1,291 @@
+/*
+ * CSS for Dark Mint
+ * By Soliac <http://www.oswd.org/user/profile/id/7565>
+ */
+body {
+	font: 9pt Verdana, sans-serif;
+	background-color: rgb(110, 140, 110);
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+a {
+  color: rgb(40, 80, 40);
+  text-decoration: underline;
+}
+a:hover {
+	text-decoration: none;
+}
+
+p {
+	padding: 2px 10px;
+	margin: 0;
+	line-height: 1.5em;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+h1 {
+	font-size: 2em;
+	padding: 0;
+	margin: 0;
+}
+h2 {
+	color: rgb(40, 80, 40);
+	border-bottom: 1px solid rgb(70, 100, 70);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 9pt;
+}
+h3 {
+  color: rgb(40, 80, 40);
+  border-bottom: 1px solid rgb(70, 100, 70);
+  font-size: 8pt;
+}
+
+#wrapper {
+	margin: 0 auto;
+	width: 700px;
+}
+#wrapper2 {
+	border: 1px solid rgb(90, 90, 90);
+	background-color: rgb(120, 160, 120);
+}
+
+#header {
+    line-height: normal;
+	color: rgb(140, 200, 160);
+	padding: 1ex;
+}
+
+#bar {
+	margin-left: 155px;
+	padding: 5px 0 0 1px;
+}
+#bar p {
+	color: rgb(85, 85, 85);
+	padding: 5px;
+}
+#bar li {
+	float: left;
+	border: 1px solid rgb(90, 90, 90);
+	margin: -1px 0 -1px 10px;
+}
+#bar li a {
+	background-color: rgb(120, 160, 120);
+	color: rgb(85, 85, 85);
+	padding: 5px 15px;
+	display: block;
+    text-decoration: none;
+}
+#bar li a:hover {
+	color: rgb(180, 255, 180);
+}
+
+li#current {
+	border-bottom: 1px solid rgb(150, 190, 150);
+}
+li#current a, li#current a:hover {
+	background-color: rgb(150, 190, 150);
+	color: rgb(40, 40, 40);
+}
+
+#left {
+	background-color: rgb(120, 160, 120);
+	color: rgb(75, 75, 75);
+	margin: 0 10px 10px 0;
+	float: left;
+	width: 150px;
+}
+#left ul {
+	margin: 8px 5px;
+	background-color: rgb(150, 190, 150);
+	border: 1px solid rgb(90, 90, 90);
+}
+#left ul p {
+	border-bottom: 1px solid rgb(90, 90, 90);
+	background-color: rgb(110, 150, 110);
+	color: rgb(180, 255, 180);
+	margin: 0;
+	display: block;
+}
+#left li {
+	margin: 0;
+	padding: 0;
+}
+#left li a {
+	padding: 5px 0;
+	color: rgb(75, 75, 75);
+	display: block;
+	height: 1em;	/*hack to control ul link for IE*/
+    text-decoration: none;
+}
+#left li a:hover {
+	background-color: rgb(100, 120, 100);
+	color: rgb(160, 200, 160);
+}
+#left > ul a {
+	height: auto;	/*resets link height for non-IE browsers*/
+}
+
+#main {
+	font-size: 8.5pt;
+	text-align: left;
+	border: 1px solid rgb(90, 90, 90);
+	border-right: none;
+	border-top: none;
+	background-color: rgb(150, 190, 150);
+	margin-left: 150px;
+    min-height: 400px;
+	padding: 5px 0;
+}
+#main a {
+  border-bottom: 1px solid rgb(40, 80, 40);
+  color: rgb(40, 80, 40);
+  font-weight: bold;
+  text-decoration: none;
+}
+#main a:hover {
+  border-bottom: none;
+}
+#main a:visited {
+	font-weight: normal;
+}
+
+.page_section {
+  margin-bottom: 2em;
+}
+
+/* The div containing the messages. */
+#messages {
+	width: 100%;
+}
+#messages p {
+	background-color: #78a078;
+	border: 1px solid #466446;
+	margin: 0 1em;
+	font-size: 8.5pt;
+	text-align: center;
+}
+#messages a, #messages a:visited {
+	border: none;
+	float: left;
+	margin-right: 1.5em;
+	text-decoration: none;
+}
+#flash_notice {
+	color: #285028;
+}
+#flash_warning {
+	color: rgb(150, 0, 0);
+}
+
+.login_box_field {
+  color: #333;
+  font-size: 0.75em;
+  font-style: italic;
+}
+
+#login_box_submit {
+  background-color: #96be96;
+  border: none;
+  color: #4b4b4b;
+  font-size: 9pt;
+  height: 2em;
+  width: 100%;
+}
+#login_box_submit:hover {
+  background-color: rgb(100, 120, 100);
+  color: rgb(160, 200, 160);
+  cursor: pointer;
+}
+
+.blog_post h1 {
+	color: rgb(40, 80, 40);
+	border-bottom: 1px solid rgb(70, 100, 70);
+	margin: 5px;
+	padding: 2px 5px;
+	font-size: 8.5pt;
+    text-decoration: none;
+}
+.blog_post div {
+	padding-left: 1em;
+}
+.blog_post p {
+}
+
+a#post_title {
+  border: none;
+  font-weight: bold;
+  text-decoration: none;
+}
+a:hover#post_title {
+  border-left: 1px solid rgb(40, 80, 40);
+  border-right: 1px solid rgb(40, 80, 40);
+}
+a:visited#post_title {
+  font-weight: bold;
+}
+
+.site_stats {
+  margin: 0 2em;
+}
+#user_stats {
+}
+
+#user_plans_table {
+  width: 95%;
+}
+.user_plan:hover {
+  background-color: #6e8c6e;
+}
+
+#api_key {
+  font-weight: bold;
+}
+#api_regen_dialog {
+  background-color: #78a078;
+  border: 1px solid #466446;
+  margin: 1em;
+  padding: 0.3em;
+  position: relative;
+  left: 20%;
+  text-align: center;
+  width: 50%;
+}
+
+#footer {
+	border-top: 1px solid rgb(90, 90, 90);
+	background-color: rgb(130, 170, 130);
+	font-size: 90%;
+	padding: 4px;
+	margin-top: 10px;
+	clear: right;
+	display: block;
+	float: none;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {
+    display: inline-table;
+}
+
+/* Hides from IE-mac \*/
+ html .clearfix {
+    height: 1%;
+}
+.clearfix {
+    display: block;
+}
+/* End hide from IE-mac */
