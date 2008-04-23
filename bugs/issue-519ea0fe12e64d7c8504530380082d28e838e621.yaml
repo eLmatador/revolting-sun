@@ -7,7 +7,7 @@ type: :feature
 component: rsun
 release: alpha
 reporter: Dale Campbell <oshuma@gmail.com>
-status: :unstarted
+status: :in_progress
 disposition: 
 creation_time: 2008-04-23 05:45:18.440585 Z
 references: []
@@ -22,3 +22,7 @@ log_events:
   - Dale Campbell <oshuma@gmail.com>
   - assigned to release alpha from unassigned
   - Adding rsun-1 to alpha release.
+- - 2008-04-23 06:48:03.019109 Z
+  - Dale Campbell <oshuma@gmail.com>
+  - changed status from unstarted to in_progress
+  - ""

@@ -10,8 +10,7 @@ require 'tasks/rails'
 REPOS = %w{ github gitorious rubyforge }
 
 # The local branch to work with.
-# TODO: Make this take a branch name from an env variable and/or --branch option.
-BRANCH = 'master'
+BRANCH = ENV['BRANCH'] || 'master'
 
 # Rake tasks for dealing with the git repositories.
 namespace :git do
@@ -30,19 +29,19 @@ namespace :git do
     
     desc 'Push the code to githb'
     task :github do
-      header('Pushing to github.')
+      header("Pushing branch '#{BRANCH}' to github.")
       sh "git push github #{BRANCH}"
     end
     
     desc 'Push the code to gitorious'
     task :gitorious do
-      header('Pushing to gitorious.')
+      header("Pushing branch '#{BRANCH}' to gitorious.")
       sh "git push gitorious #{BRANCH}"
     end
 
     desc 'Push the code to RubyForge'
     task :rubyforge do
-      header('Pushing to RubyForge.')
+      header("Pushing branch '#{BRANCH}' to RubyForge.")
       sh "git push rubyforge #{BRANCH}"
     end
   end

@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: DRY up git Rake tasks.
+desc: There's a lot of repetition in there!
+type: :feature
+component: rsun
+release: alpha
+reporter: Dale Campbell <oshuma@gmail.com>
+status: :unstarted
+disposition: 
+creation_time: 2008-04-23 06:51:22.863694 Z
+references: []
+
+id: 32a88d4aa4e4a10d69ed349750f9382826b4cf35
+log_events: 
+- - 2008-04-23 06:51:23.879618 Z
+  - Dale Campbell <oshuma@gmail.com>
+  - created
+  - ""
