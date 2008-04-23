@@ -16,8 +16,17 @@
 <table>
 
 ## Code
-RubyForge:: git://rubyforge.org/revolting-sun.git
-Github:: git://github.com/Oshuma/revolting-sun.git
+
+<table>
+	<tr>
+		<td>RubyForge:</td>
+		<td>git://rubyforge.org/revolting-sun.git</td>
+	</tr>
+	<tr>
+		<td>Github:</td>
+		<td>git://github.com/Oshuma/revolting-sun.git</td>
+	</tr>
+</table>
 
 
 ## Ideas
