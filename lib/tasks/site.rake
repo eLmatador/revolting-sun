@@ -26,7 +26,7 @@ namespace :site do
   desc 'Upload the issues and docs to the website'
   task :upload => :setup_site_dir do
     header('Uploading local site to remote site.')
-    puts "scp -r #{ISSUE_DIR} #{REMOTE_SITE}"
-    puts "scp -r #{DOC_DIR} #{REMOTE_SITE}"
+    sh "scp -r #{ISSUE_DIR} #{REMOTE_SITE}"
+    sh "scp -r #{DOC_DIR} #{REMOTE_SITE}"
   end
 end
