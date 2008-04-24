@@ -56,6 +56,7 @@ end
 # Displays +message+ inside a formatted header.
 def header(message = nil)
   raise ArgumentError, 'No message passed to header.' unless message
+  puts "\n"
   puts '+---'
   puts "| #{message}"
   puts '+---'

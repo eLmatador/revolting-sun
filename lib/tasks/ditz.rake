@@ -41,7 +41,7 @@ namespace :issues do
     desc 'Clear the issue report'
     task :clear do
       header("Removing issue report from #{ISSUE_DIR}")
-      sh "rm -rvf #{ISSUE_DIR}"
+      sh "rm -rf #{ISSUE_DIR}"
     end
   end
 end
