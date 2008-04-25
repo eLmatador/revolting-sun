@@ -25,6 +25,7 @@ DOC_DIR = "#{RAILS_ROOT}/doc/app"
 namespace :site do
   desc 'Clear the local site directory of dynamic files'
   task :clear_local do
+    header("Clearing local site directory: #{LOCAL_SITE}")
     sh "rm -rf #{LOCAL_SITE}/docs"
     sh "rm -rf #{LOCAL_SITE}/issues"
   end

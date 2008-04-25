@@ -14,6 +14,12 @@ namespace :util do
 
     header('Clearing tmp.')
     Rake::Task['tmp:clear'].invoke
+
+    header('Clearing app docs.')
+    sh "rm -rf #{RAILS_ROOT}/doc/app"
+
+    Rake::Task['issues:report:clear'].invoke
+    Rake::Task['site:clear_local'].invoke
   end
 
   desc 'Reset the database and load all fixtures'
