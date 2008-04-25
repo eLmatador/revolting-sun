@@ -23,6 +23,12 @@ DOC_DIR = "#{RAILS_ROOT}/doc/app"
 
 # Rake tasks for dealing with the website.
 namespace :site do
+  desc 'Clear the local site directory of dynamic files'
+  task :clear_local do
+    sh "rm -rf #{LOCAL_SITE}/docs"
+    sh "rm -rf #{LOCAL_SITE}/issues"
+  end
+
   # Copies the issue and docs to the site directory.
   task :setup_site_dir => [ 'doc:app', 'issues:report'] do
     header('Copying issue and docs to the site directory.')
@@ -34,8 +40,5 @@ namespace :site do
   task :upload => :setup_site_dir do
     header('Uploading local site to remote site.')
     sh "cd #{LOCAL_SITE} && scp -r ./* #{REMOTE_SITE}"
-    # sh "cd #{LOCAL_SITE} && scp #{PAGES.join(' ')} #{REMOTE_SITE}"
-    # sh "scp -r #{ISSUE_DIR} #{REMOTE_SITE}"
-    # sh "scp -r #{DOC_DIR} #{REMOTE_SITE}"
   end
 end
