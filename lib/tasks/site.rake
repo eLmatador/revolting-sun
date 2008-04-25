@@ -9,7 +9,13 @@ require 'tasks/rails'
 LOCAL_SITE = "#{RAILS_ROOT}/doc/rubyforge.site"
 
 # The remote directory the files will be scp'ed to.
-REMOTE_SITE = 'revolting-sun.rubyforge.org/var/www/gforge-projects/revolting-sun'
+REMOTE_SITE = 'revolting-sun.rubyforge.org:/var/www/gforge-projects/revolting-sun'
+
+# A list of static pages to upload.
+PAGES = %w{
+  index.html
+  robots.txt
+}
 
 # Issue and Rails app doc directories.
 ISSUE_DIR = "#{RAILS_ROOT}/doc/issues"
@@ -20,13 +26,16 @@ namespace :site do
   # Copies the issue and docs to the site directory.
   task :setup_site_dir => [ 'doc:app', 'issues:report'] do
     header('Copying issue and docs to the site directory.')
-    puts "cp -r #{ISSUE_DIR} #{DOC_DIR} #{LOCAL_SITE}"
+    sh "cp -r #{ISSUE_DIR} #{LOCAL_SITE}"
+    sh "cp -r #{DOC_DIR} #{LOCAL_SITE}/docs"
   end
 
   desc 'Upload the issues and docs to the website'
   task :upload => :setup_site_dir do
     header('Uploading local site to remote site.')
-    sh "scp -r #{ISSUE_DIR} #{REMOTE_SITE}"
-    sh "scp -r #{DOC_DIR} #{REMOTE_SITE}"
+    sh "cd #{LOCAL_SITE} && scp -r ./* #{REMOTE_SITE}"
+    # sh "cd #{LOCAL_SITE} && scp #{PAGES.join(' ')} #{REMOTE_SITE}"
+    # sh "scp -r #{ISSUE_DIR} #{REMOTE_SITE}"
+    # sh "scp -r #{DOC_DIR} #{REMOTE_SITE}"
   end
 end
